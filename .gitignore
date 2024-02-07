@@ -1,0 +1,5 @@
+git init
+git remote add origine https://github.com/omkarmaske160/Attendance.git
+git add .
+git commit -m "initial setup"
+git push origin master
