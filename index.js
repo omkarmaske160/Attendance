@@ -15,7 +15,7 @@ app.use("/api/admin", require("./routes/adminRoute"))
 
 app.use("*", (req, res) => {
     res.sendFile(path.join(__dirname, "dist", "index.html"))
-    res.status(404).json({ message: "Resource Not Found" })
+    // res.status(404).json({ message: "Resource Not Found" })
 })
 
 app.use((err, req, res, next) => {
