@@ -9,12 +9,12 @@ const app = express()
 
 app.use(cors())
 app.use(express.json())
-app.use(express.static(path.join(__dirname, "dist", "index.html")))
+app.use(express.static(path.join(__dirname, "dist")))
 
 app.use("/api/admin", require("./routes/adminRoute"))
 
 app.use("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "dist"))
+    res.sendFile(path.join(__dirname, "dist", "index.html"))
     // res.status(404).json({ message: "Resource Not Found" })
 })
 
